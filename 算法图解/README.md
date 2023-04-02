@@ -17,3 +17,9 @@ This repository includes algorithms and data structure textbooks, learning code
 ### Chapter2 - Selection sort
 ### Chapter3 - Recursive
 - 递归只是让解决方案更清晰，并没有性能上的优势
+- 每个递归函数都有两部分：**基线条件(base case)** 和 **递归条件(recursive case)**
+  - 递归条件指的是函数调用自己
+  - 基线条件指的是函数不再调用自己
+- 调用栈(call stack) 只有两种操作 **压入** 和 **弹出**
+  - 调用另一个函数时，当前函数暂停并处于未完成状态。新的函数会位于第一个内存块的上面，执行完，返回以后栈顶的内存块被弹出，再去调用函数体内的另一个函数，再压在当前函数的顶端。
+  - 所有函数调用都进入调用栈

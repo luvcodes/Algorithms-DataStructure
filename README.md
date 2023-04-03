@@ -45,3 +45,5 @@ This repository includes algorithms and data structure textbooks, learning code
   - 键-值对的添加顺序重要吗？不重要 因为散列表是无序的
 - **运行时间** 广度优先搜索的运行时间为O(人数 + 边数)，O(V + E)，其中V为顶点(vertice)数，E为边数
 - **树** 树是一种特殊的图，其中没有往后指的边
+### Chapter7 - 狄克斯特拉算法 (Dijkstra's algorithm)
+**BFS算出来两个结果：有没有路径 和 最短路径，狄克斯特拉算法找出 最快路径**

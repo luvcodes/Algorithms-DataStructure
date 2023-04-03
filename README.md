@@ -91,12 +91,9 @@ This repository includes algorithms and data structure textbooks, learning code
 - 找出最长公共子串
 
 ### Chapter10 K临近算法
+
 - 使用KNN来做两项基本工作——分类和回归
 - KNN用于分类和回归，需要考虑最近的邻居
 - 分类就是编组
 - 回归就是预测结果（如数字）
 - 特征抽取
-
-### Chapter11 
-1. 二分查找树
-2. 

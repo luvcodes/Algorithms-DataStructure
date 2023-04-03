@@ -27,3 +27,10 @@ This repository includes algorithms and data structure textbooks, learning code
   - 基线条件：为空或只包含一个元素的数组是“有序”的
   - 递归条件：假设取数组的第一个元素为基准值
   - **分别递归调用quicksort来排序小于基准值的子数组，也排序大于基准值的总数组**
+### Chapter5 - 散列表 Hash table 在python中实现为字典
+- 结合使用`散列函数`和`数组`来创建散列表
+- **缓存**的概念
+  - 缓存的数据存储在散列表中
+- **冲突**的概念
+  - 冲突（collision）：给两个键分配的位置相同
+- Big-O：平均情况O(1) 最糟情况O(n)

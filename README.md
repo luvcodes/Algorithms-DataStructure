@@ -97,3 +97,7 @@ This repository includes algorithms and data structure textbooks, learning code
 - 分类就是编组
 - 回归就是预测结果（如数字）
 - 特征抽取
+
+### 基于《啊哈！算法》的阅读 以此来记录笔记
+
+#### Chapter 1 排序

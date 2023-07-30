@@ -54,7 +54,7 @@ This repository includes algorithms and data structure textbooks, learning code
   - 从节点A出发，前往节点B的哪条路径最短？
   - **队列**的概念 队列类似于栈，你不能随机地访问队列中的元素。队列只支持两种操作：入队和出队
 - 实现图: 图由多个节点组成 **使用散列表** 每个节点都与邻近节点相连，一种结构让你能够表示这种关
-系
+  系
   - 将节点映射到其所有**邻居**
   - 键-值对的添加顺序重要吗？不重要 因为散列表是无序的
   - **有向图**和**无向图**
@@ -135,6 +135,7 @@ This repository includes algorithms and data structure textbooks, learning code
       1. 用常数1取代运行实践中的所有加法常数
       2. 在修改后的运行次数函数中，只保留最高阶项
       3. 如果最高阶项存在且不是1，则去除与这个项相乘的常数。
+      4. ![](/Users/yangrunze/Library/Application Support/typora-user-images/截屏2023-07-31 上午12.10.05.png)
 
 #### 第三章 线性表
 
@@ -143,3 +144,16 @@ This repository includes algorithms and data structure textbooks, learning code
 - 线性表(List): 零个或多个数据元素的有限序列
   - 元素之间是有顺序的
   - 线性表强调是有限的
+  - 元素的数据类型相同
+
+##### 3.4 线性表的顺序结构
+
+- 顺序存储: 用一段地址连续的存储单元依次存储线性表的数据元素。
+  - 描述顺序存储结构需要三个属性
+    - 存储空间的起始位置
+    - 线性表的最大存储容量: 数组长度MaxSize
+    - 线性表的当前长度: length
+  - 区分数组长度MaxSize和线性表长度length
+    - 数组长度是存放线性表的存储空间的长度，存储分配后这个量一般是不变的。
+    - 线性表的长度是线性表中数据元素的个数，这个量是变化的。
+    - 在任一时刻，线性表的长度应该小于等于数组的长度。用数组存储顺序表意味着分配固定长度的数组空间，由于线性表中可以进行插入和删除操作，因此分配的数组空间要大于等于档案线性表的长度。

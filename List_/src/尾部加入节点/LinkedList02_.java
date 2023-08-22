@@ -2,48 +2,50 @@ package 尾部加入节点;
 
 /**
  * 在链表尾部加入节点
- * */
-
-public class LinkedList02_ {
-    private 首位加入节点.Node head;
-
-    public void addLast(int data) {
-        首位加入节点.Node node = new 首位加入节点.Node(data);
-
-        if (head == null) {
-            head = node;
-        } else {
-            首位加入节点.Node current = head;
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = node;
-        }
-    }
-
-    public void print() {
-        首位加入节点.Node current = head;
-        while (current != null) {
-            System.out.println(current.data);
-            current = current.next;
-        }
-    }
-
-    public static void main(String[] args) {
-        LinkedList02_ linkedList02 = new LinkedList02_();
-        linkedList02.addLast(1);
-        linkedList02.addLast(2);
-        linkedList02.addLast(3);
-        linkedList02.print();
-    }
-}
-
+ */
 class Node {
     int data;
-    首位加入节点.Node next;
+    Node next;
 
     public Node(int data) {
         this.data = data;
         this.next = null;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    public LinkedList() {
+        this.head = null;
+    }
+
+    public void insertAtHead(int data) {
+        Node newNode = new Node(data); // 创建新节点
+        if (head == null) {
+            head = newNode; // 如果链表为空，直接将头节点指向新节点
+        } else {
+            newNode.next = head; // 新节点的下一个节点是原来的头节点
+            head = newNode; // 更新头节点指针为新节点
+        }
+    }
+
+    public void display() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        LinkedList linkedList = new LinkedList();
+        linkedList.insertAtHead(3);
+        linkedList.insertAtHead(2);
+        linkedList.insertAtHead(1);
+
+        System.out.println("Linked List after inserting at head:");
+        linkedList.display(); // 输出：1 2 3
     }
 }

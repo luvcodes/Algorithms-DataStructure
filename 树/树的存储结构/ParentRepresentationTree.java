@@ -1,3 +1,5 @@
+package 树的存储结构;
+
 class TreeNode {
     int data;
     int parentIndex; // 父节点在数组中的索引

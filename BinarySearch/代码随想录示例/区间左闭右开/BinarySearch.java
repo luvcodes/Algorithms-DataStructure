@@ -11,7 +11,8 @@ class Solution {
         }
 
         int left = 0;
-        int right = nums.length - 1;
+        // 这里是nums.length而不是nums.length - 1，因为不包含右边界了
+        int right = nums.length; 
         // 因为现在要验证左闭右开的情况
         // 所以left和right肯定不能相等
         while (left < right) {

@@ -4,7 +4,7 @@ int binarySearch(int[] nums, int target){
     return -1;
 
   int left = 0, right = nums.length - 1;
-  while(left <= right){
+  while(lef<t = right){
     // Prevent (left + right) overflow
     int mid = left + (right - left) / 2;
     if(nums[mid] == target){ return mid; }

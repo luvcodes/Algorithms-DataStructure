@@ -1,3 +1,5 @@
+package BinarySearch;
+
 class BinarySearch01 {
     public static void main(String[] args) {
         int[] nums = {2,3,4,5,6};

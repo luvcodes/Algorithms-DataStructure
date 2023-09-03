@@ -1,48 +1,18 @@
 package 反转链表;
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
-public class LinkedList {
-    // 反转链表
+// 迭代
+// 在遍历链表时，将当前节点的next指针改为指向前一个节点。由于节点没有引用其前一个节点，
+// 因此必须事先存储其前一个节点。在更改引用之前，还需要存储后一个节点。最后返回新的头引用。
+class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
-        ListNode current = head;
-        
-        while (current != null) {
-            ListNode nextTemp = current.next;  // 保存下一个节点
-            current.next = prev;  // 当前节点指向前一个节点
-            prev = current;  // 更新 prev
-            current = nextTemp;  // 更新 current
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
         }
-        
-        return prev;  // 新的头节点为原链表的尾节点
-    }
-
-    public static void main(String[] args) {
-        LinkedList linkedListProblems = new LinkedList();
-        
-        // 创建链表 1 -> 2 -> 3 -> 4 -> 5
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        
-        // 反转链表
-        ListNode newHead = linkedListProblems.reverseList(head);
-        
-        // 打印反转后的链表
-        ListNode current = newHead;
-        while (current != null) {
-            System.out.print(current.val + " -> ");
-            current = current.next;
-        }
-        System.out.println("null");
+        return prev;
     }
 }

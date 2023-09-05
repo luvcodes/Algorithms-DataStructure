@@ -1,10 +1,17 @@
+/**
+ * 如果问题只需要检查中间元素，选择第一种模板。
+   如果问题需要确定一个范围或查找插入位置，选择第二种模板。
+   如果问题需要检查中间元素的邻居，选择第三种模板。
+ * */
+
+
 // 用于查找可以通过访问数组中的单个索引来确定的元素或条件
 int binarySearch(int[] nums, int target){
   if(nums == null || nums.length == 0)
     return -1;
 
   int left = 0, right = nums.length - 1;
-  while(lef<t = right){
+  while(left <= right){
     // Prevent (left + right) overflow
     int mid = left + (right - left) / 2;
     if(nums[mid] == target){ return mid; }

@@ -1,5 +1,6 @@
 	class Solution {
     public boolean isPerfectSquare(int num) {
+        // 判断是不是二分查找，那么就用left定义成0，right定义成输入的num本身
         int left = 0, right = num;
         while (left <= right) {
             int mid = (right - left) / 2 + left;

@@ -2,7 +2,6 @@ package Initialize_;
 
 import java.util.Stack;
 
-// "static void main" must be defined in a public class.
 public class Main {
     public static void main(String[] args) {
         // 1. Initialize a stack.

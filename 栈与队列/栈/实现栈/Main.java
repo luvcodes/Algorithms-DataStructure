@@ -1,6 +1,6 @@
-// "static void main" must be defined in a public class.
 class MyStack {
-    private List<Integer> data;               // store elements
+    // store elements
+    private List<Integer> data;               
     public MyStack() {
         data = new ArrayList<>();
     }
